@@ -9,9 +9,8 @@ namespace Library.Models
     public class CategoryWithNumberOfJobs
     {
         public int Id { get; set; }
-
-        public string CategoryName { get; set; }
-        public int JobQuantities { get; set; }
+        public string? CategoryName { get; set; }
+        public int JobQuanities { get; set; }
 
     }
 }

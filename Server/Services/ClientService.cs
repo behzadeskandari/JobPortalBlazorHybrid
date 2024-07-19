@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace Server.Services
 {
@@ -237,7 +238,7 @@ namespace Server.Services
             if (getUser == null) return new ServiceResponse() { Flag = false, Message = "User not found" };
 
             //check if data already submited
-            var data = await appDbContext.CompanyInfo.FirstOrDefaultAsync(_ => _.ClientId == model.ClientId);
+            CompanyInfo? data = await appDbContext.CompanyInfo.FirstOrDefaultAsync(_ => _.ClientId == model.ClientId);
             if (data is not null)
             {
                 data.CompanyCertificateName = model.CompanyCertificateName;
