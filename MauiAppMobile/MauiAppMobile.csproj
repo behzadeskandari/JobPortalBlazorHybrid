@@ -66,4 +66,8 @@
       <ProjectReference Include="..\Library\Library.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\css\bootstrap-5.0.2\" />
+    </ItemGroup>
+
 </Project>
